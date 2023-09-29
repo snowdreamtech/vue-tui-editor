@@ -17,12 +17,23 @@
     "url": "https://github.com/snowdreamtech/vs-ts/issues"
   },
   "homepage": "https://github.com/snowdreamtech",
+  "exports": {
+    ".": {
+      "import": "./dist/index.min.js",
+      "require": "./dist/index.min.cjs"
+    }
+  },
+  "files": [
+    "src",
+    "dist",
+    "types"
+  ],
+  "types": "types/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "stage": "vue-tsc && vite build --mode staging",
-    "testing": "vue-tsc && vite build --mode testing",
+    "build": "vue-tsc --noEmit true && vite build --emptyOutDir --minify false && vite build --mode minify --minify esbuild",
     "preview": "vite preview",
+    "dts": "vue-tsc --noEmit false --declaration --emitDeclarationOnly --declarationDir ./types",
     "lint": "pnpm lint:eslint && pnpm lint:stylelint",
     "lint:eslint": "eslint --fix --ext .js,.jsx,.vue,.ts,.tsx .",
     "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss,sass,styl}\"",
