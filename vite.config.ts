@@ -5,7 +5,7 @@ import stylelint from 'vite-plugin-stylelint';
 
 // https://vitejs.dev/config/
 // https://vitejs.dev/config/#using-environment-variables-in-config
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ command, mode, ssrBuild }) => {
   // Load env file based on `mode` in the current working directory.
   // Set the third parameter to '' to load all env regardless of the `VITE_` prefix.
   const env = loadEnv(mode, "env", '')
