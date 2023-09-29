@@ -59,7 +59,7 @@ jobs:
         run: pnpm lint:stylelint
 
       - name: Build
-        run: pnpm build && touch .output/public/.nojekyll
+        run: pnpm build && touch dist/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
