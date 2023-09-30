@@ -1,5 +1,4 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import Editor from './components/Editor.vue';
+import Viewer from './components/Viewer.vue';
 
-createApp(App).mount('#app')
+export { Editor, Viewer };

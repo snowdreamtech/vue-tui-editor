@@ -1,9 +1,14 @@
 {
-  "name": "vue-ts",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@snowdreamtech/vue-tui-editor",
+  "private": false,
+  "version": "0.1.0",
   "keywords": [
     "vue",
+    "vue3",
+    "vite",
+    "editor",
+    "tui",
+    "tui.editor",
     "esbuild"
   ],
   "type": "module",
@@ -11,10 +16,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/snowdreamtech/vs-ts.git"
+    "url": "https://github.com/snowdreamtech/vue-tui-editor.git"
   },
   "bugs": {
-    "url": "https://github.com/snowdreamtech/vs-ts/issues"
+    "url": "https://github.com/snowdreamtech/vue-tui-editor/issues"
   },
   "homepage": "https://github.com/snowdreamtech",
   "exports": {
@@ -33,14 +38,16 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit true && vite build --emptyOutDir --minify false && vite build --mode minify --minify esbuild",
     "preview": "vite preview",
-    "dts": "vue-tsc --noEmit false --declaration --emitDeclarationOnly --declarationDir ./types",
+    "dts": "vue-tsc  -noEmit false --declaration --emitDeclarationOnly --declarationDir ./types",
     "lint": "pnpm lint:eslint && pnpm lint:stylelint",
     "lint:eslint": "eslint --fix --ext .js,.jsx,.vue,.ts,.tsx .",
     "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss,sass,styl}\"",
     "lint:commitlint": "commitlint --edit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "publish": "npm publish --access public"
   },
   "dependencies": {
+    "@toast-ui/editor": "^3.2.2",
     "vue": "3.3.4"
   },
   "devDependencies": {
