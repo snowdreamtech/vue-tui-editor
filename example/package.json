@@ -30,6 +30,14 @@
     },
   "dependencies": {
     "@snowdreamtech/vue-tui-editor": "0.1.1",
+    "@toast-ui/editor": "3.2.2",
+    "tui-color-picker": "2.2.8",
+    "@toast-ui/chart": "4.6.1",
+    "@toast-ui/editor-plugin-chart": "3.0.1",
+    "@toast-ui/editor-plugin-code-syntax-highlight": "3.1.0",
+    "@toast-ui/editor-plugin-color-syntax": "3.1.0",
+    "@toast-ui/editor-plugin-table-merged-cell": "3.1.0",
+    "@toast-ui/editor-plugin-uml": "3.0.1",
     "vue": "3.3.4"
   },
   "devDependencies": {
