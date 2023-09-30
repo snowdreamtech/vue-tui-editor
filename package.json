@@ -1,7 +1,7 @@
 {
   "name": "@snowdreamtech/vue-tui-editor",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "vue",
     "vue3",
@@ -33,7 +33,7 @@
     "dist",
     "types"
   ],
-  "types": "types/index.d.ts",
+  "types": "types/main.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit true && vite build --emptyOutDir --minify false && vite build --mode minify --minify esbuild",
@@ -44,7 +44,7 @@
     "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss,sass,styl}\"",
     "lint:commitlint": "commitlint --edit",
     "prepare": "husky install",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access=public"
   },
   "dependencies": {
     "@toast-ui/editor": "^3.2.2",
