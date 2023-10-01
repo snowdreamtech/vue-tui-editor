@@ -1,7 +1,7 @@
 {
   "name": "@snowdreamtech/vue-tui-editor",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "vue",
     "vue3",
@@ -47,7 +47,7 @@
     "publish": "npm publish --access=public"
   },
   "dependencies": {
-    "@toast-ui/editor": "^3.2.2",
+    "@toast-ui/editor": "3.2.2",
     "vue": "3.3.4"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-import { SSObject } from './interface'
+import { SAObject } from './interface'
 
 export const editorEvents = [
     'load',
@@ -12,9 +12,9 @@ export const editorEvents = [
     'beforeConvertWysiwygToMarkdown',
 ];
 
-export const defaultValueMap: SSObject = {
+export const defaultValueMap: SAObject = {
     initialEditType: 'markdown',
     initialValue: '',
-    height: '300px',
+    height: '800px',
     previewStyle: 'vertical',
 };

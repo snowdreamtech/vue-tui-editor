@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   '@toast-ui/editor':
-    specifier: ^3.2.2
+    specifier: 3.2.2
     version: 3.2.2
   vue:
     specifier: 3.3.4
