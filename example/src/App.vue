@@ -1,24 +1,23 @@
 <template>
-  <h1>Basic</h1>
-  <Editor :initialValue="content" />
+  <h1>Editor Basic</h1>
+  <Editor :initialValue="content"/>
 
-  <h1>With All Plugins</h1>
-  <Editor :initialValue="fullcontent" :options="editorOptions" />
+  <h1>Editor With All Plugins</h1>
+  <Editor :initialValue="fullcontent" :options="editorOptions" /> 
+
+   <h1>Viewer Basic</h1>
+  <Viewer :initialValue="content"/>
+
+  <h1>Viewer With All Plugins</h1>
+  <Viewer :initialValue="fullcontent" :options="editorOptions" />
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 
-import { Editor } from '@snowdreamtech/vue-tui-editor';
+import { Editor, Viewer } from '@snowdreamtech/vue-tui-editor';
 
 import '@toast-ui/editor/dist/toastui-editor.css'
-
-// language
-import '@toast-ui/editor/dist/i18n/zh-CN'
-// import '@toast-ui/editor/dist/i18n/zh-TW'
-// import '@toast-ui/editor/dist/i18n/en-US'
-// import '@toast-ui/editor/dist/i18n/ja-JP'
-// import '@toast-ui/editor/dist/i18n/es-ES'
 
 import '@toast-ui/chart/dist/toastui-chart.css'
 import chart from '@toast-ui/editor-plugin-chart'
@@ -32,8 +31,18 @@ import 'tui-color-picker/dist/tui-color-picker.css'
 import '@toast-ui/editor-plugin-color-syntax/dist/toastui-editor-plugin-color-syntax.css'
 import colorSyntax from '@toast-ui/editor-plugin-color-syntax'
 
+import Prism from 'prismjs'
+// import 'prismjs/themes/prism.css'
+// import 'prismjs/themes/prism-dark.css'
+// import 'prismjs/themes/prism-okaidia.css'
+import 'prismjs/themes/prism-tomorrow.css'
+// import 'prismjs/themes/prism-coy.css'
+// import 'prismjs/themes/prism-funky.css'
+// import 'prismjs/themes/prism-solarizedlight.css'
+// import 'prismjs/themes/prism-twilight.css'
+
 import '@toast-ui/editor-plugin-code-syntax-highlight/dist/toastui-editor-plugin-code-syntax-highlight.css'
-import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight/dist/toastui-editor-plugin-code-syntax-highlight-all.js'
+import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight/dist/toastui-editor-plugin-code-syntax-highlight-all'
 
 
 const chartOptions = {
@@ -43,7 +52,7 @@ const chartOptions = {
   maxHeight: 300
 }
 
-const plugins: any = [[chart, chartOptions], uml, tableMergedCell, colorSyntax, codeSyntaxHighlight]
+const plugins: any = [[chart, chartOptions], uml, tableMergedCell, colorSyntax, [codeSyntaxHighlight, { highlighter: Prism }]]
 
 
 const content = ref(
@@ -154,7 +163,7 @@ $$
 )
 
 const editorOptions = ref({
-  language:'en-US',
+  language:'zh-CN',
   plugins:plugins
 }) 
 </script>

@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@snowdreamtech/vue-tui-editor':
-    specifier: 0.1.1
-    version: 0.1.1
+    specifier: link:..
+    version: link:..
   '@toast-ui/chart':
     specifier: 4.6.1
     version: 4.6.1
@@ -29,6 +29,9 @@ dependencies:
   '@toast-ui/editor-plugin-uml':
     specifier: 3.0.1
     version: 3.0.1
+  prismjs:
+    specifier: 1.29.0
+    version: 1.29.0
   tui-color-picker:
     specifier: 2.2.8
     version: 2.2.8
@@ -49,6 +52,9 @@ devDependencies:
   '@types/node':
     specifier: 20.7.1
     version: 20.7.1
+  '@types/prismjs':
+    specifier: 1.26.1
+    version: 1.26.1
   '@vitejs/plugin-vue':
     specifier: 4.3.4
     version: 4.3.4(vite@4.4.9)(vue@3.3.4)
@@ -683,13 +689,6 @@ packages:
     resolution: {integrity: sha512-EF3948ckf3f5uPgYbQ6GhyA56Dmv8yg0+ir+BroRjwdxyZJsekhZzawOecC2rOTPCz173t7ZcR1HHZu0dZgOCw==}
     dev: true
 
-  /@snowdreamtech/vue-tui-editor@0.1.1:
-    resolution: {integrity: sha512-1XboGoLMNrC+qoUnApPS6+f7Mce9+Vn5EgQB2hY/rFZVLjRyMIq0UiPQf+TGc8yWln82GJaG2vz9QwmKI4uz/g==}
-    dependencies:
-      '@toast-ui/editor': 3.2.2
-      vue: 3.3.4
-    dev: false
-
   /@toast-ui/chart@4.6.1:
     resolution: {integrity: sha512-F35IkHS0U9zqN6xIV1Yj3/wh8KGlZyzT3bwVGBJh/82DMDMn8rD2Us8X7xBMBGcZ3E15qkfnKjrATxU5ZoGAnA==}
     dev: false
@@ -780,6 +779,10 @@ packages:
 
   /@types/normalize-package-data@2.4.2:
     resolution: {integrity: sha512-lqa4UEhhv/2sjjIQgjX8B+RBjj47eo0mzGasklVJ78UKGQY1r0VpB9XHDaZZO9qzEFDdy4MrXLuEaSmPrPSe/A==}
+    dev: true
+
+  /@types/prismjs@1.26.1:
+    resolution: {integrity: sha512-Q7jDsRbzcNHIQje15CS/piKhu6lMLb9jwjxSfEIi4KcFKXW23GoJMkwQiJ8VObyfx+VmUaDcJxXaWN+cTCjVog==}
     dev: true
 
   /@types/semver@7.5.3:
