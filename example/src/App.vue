@@ -31,7 +31,7 @@ import 'tui-color-picker/dist/tui-color-picker.css'
 import '@toast-ui/editor-plugin-color-syntax/dist/toastui-editor-plugin-color-syntax.css'
 import colorSyntax from '@toast-ui/editor-plugin-color-syntax'
 
-import Prism from 'prismjs'
+import * as Prism from 'prismjs'
 // import 'prismjs/themes/prism.css'
 // import 'prismjs/themes/prism-dark.css'
 // import 'prismjs/themes/prism-okaidia.css'
