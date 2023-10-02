@@ -8,33 +8,6 @@ dependencies:
   '@snowdreamtech/vue-tui-editor':
     specifier: link:..
     version: link:..
-  '@toast-ui/chart':
-    specifier: 4.6.1
-    version: 4.6.1
-  '@toast-ui/editor':
-    specifier: 3.2.2
-    version: 3.2.2
-  '@toast-ui/editor-plugin-chart':
-    specifier: 3.0.1
-    version: 3.0.1
-  '@toast-ui/editor-plugin-code-syntax-highlight':
-    specifier: 3.1.0
-    version: 3.1.0
-  '@toast-ui/editor-plugin-color-syntax':
-    specifier: 3.1.0
-    version: 3.1.0
-  '@toast-ui/editor-plugin-table-merged-cell':
-    specifier: 3.1.0
-    version: 3.1.0
-  '@toast-ui/editor-plugin-uml':
-    specifier: 3.0.1
-    version: 3.0.1
-  prismjs:
-    specifier: 1.29.0
-    version: 1.29.0
-  tui-color-picker:
-    specifier: 2.2.8
-    version: 2.2.8
   vue:
     specifier: 3.3.4
     version: 3.3.4
@@ -688,51 +661,6 @@ packages:
   /@rushstack/eslint-patch@1.5.0:
     resolution: {integrity: sha512-EF3948ckf3f5uPgYbQ6GhyA56Dmv8yg0+ir+BroRjwdxyZJsekhZzawOecC2rOTPCz173t7ZcR1HHZu0dZgOCw==}
     dev: true
-
-  /@toast-ui/chart@4.6.1:
-    resolution: {integrity: sha512-F35IkHS0U9zqN6xIV1Yj3/wh8KGlZyzT3bwVGBJh/82DMDMn8rD2Us8X7xBMBGcZ3E15qkfnKjrATxU5ZoGAnA==}
-    dev: false
-
-  /@toast-ui/editor-plugin-chart@3.0.1:
-    resolution: {integrity: sha512-mdqJerDo836kxKZEa3B6NZOJLrb+acRMkPIanYo//9GFPJcllG7KFdZU+K0bSMapEED7W7OJCsOzM0VNThndHg==}
-    dependencies:
-      '@toast-ui/chart': 4.6.1
-    dev: false
-
-  /@toast-ui/editor-plugin-code-syntax-highlight@3.1.0:
-    resolution: {integrity: sha512-OgX5pZiTnHREoTTXDAFu1k6RzEspGOxeJNRlt/Lnoi1GvLbIpUTTbBcls9becpXT/Qdls++8G3r5C60cVdellA==}
-    dependencies:
-      prismjs: 1.29.0
-    dev: false
-
-  /@toast-ui/editor-plugin-color-syntax@3.1.0:
-    resolution: {integrity: sha512-UVKfMBPV+3snSaJn9RUKGbxJbgi92D2t68ow8wAjGezvMp1ht4UVETrvomdTGr+RYhXSeH3JvSwN9nmQqw0qzA==}
-    dependencies:
-      tui-color-picker: 2.2.8
-    dev: false
-
-  /@toast-ui/editor-plugin-table-merged-cell@3.1.0:
-    resolution: {integrity: sha512-9ch9h1heTs0Kkmhwpb1ef9psQSM77wvUO3J75BsHv3RO5nAug42W3HC4Y+qbX5n1z1VhOGGjuOb4GPIr8s5dRA==}
-    dev: false
-
-  /@toast-ui/editor-plugin-uml@3.0.1:
-    resolution: {integrity: sha512-KKvTB++lJkogOSBgtgJqli5nW76/fgxh0CvsHqKh5WQu2r6O+BTGPBG6oRy9PBfJvwN1g8YZ4ZLQGXSXDrtm1w==}
-    dependencies:
-      plantuml-encoder: 1.4.0
-    dev: false
-
-  /@toast-ui/editor@3.2.2:
-    resolution: {integrity: sha512-ASX7LFjN2ZYQJrwmkUajPs7DRr9FsM1+RQ82CfTO0Y5ZXorBk1VZS4C2Dpxinx9kl55V4F8/A2h2QF4QMDtRbA==}
-    dependencies:
-      dompurify: 2.4.7
-      prosemirror-commands: 1.5.2
-      prosemirror-history: 1.3.2
-      prosemirror-inputrules: 1.2.1
-      prosemirror-keymap: 1.2.2
-      prosemirror-model: 1.19.3
-      prosemirror-state: 1.4.3
-      prosemirror-view: 1.32.0
-    dev: false
 
   /@tsconfig/node10@1.0.9:
     resolution: {integrity: sha512-jNsYVVxU8v5g43Erja32laIDHXeoNvFEpX33OK4d6hljo3jDhCBDhx5dhCCTMWUojscpAagGiRkBKxpdl9fxqA==}
@@ -1489,10 +1417,6 @@ packages:
     dependencies:
       domelementtype: 2.3.0
     dev: true
-
-  /dompurify@2.4.7:
-    resolution: {integrity: sha512-kxxKlPEDa6Nc5WJi+qRgPbOAbgTpSULL+vI3NUXsZMlkJxTqYI9wg5ZTay2sFrdZRWHPWNi+EdAhcJf81WtoMQ==}
-    dev: false
 
   /domutils@3.1.0:
     resolution: {integrity: sha512-H78uMmQtI2AhgDJjWeQmHwJJ2bLPD3GMmO7Zja/ZZh84wkm+4ut+IUnUdRa8uCGX88DiVx1j6FRe1XfxEgjEZA==}
@@ -2425,10 +2349,6 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /orderedmap@2.1.1:
-    resolution: {integrity: sha512-TvAWxi0nDe1j/rtMcWcIj94+Ffe6n7zhow33h40SKxmsmozs6dz/e+EajymfoFcHd7sxNn8yHM8839uixMOV6g==}
-    dev: false
-
   /p-limit@2.3.0:
     resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==}
     engines: {node: '>=6'}
@@ -2511,10 +2431,6 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /plantuml-encoder@1.4.0:
-    resolution: {integrity: sha512-sxMwpDw/ySY1WB2CE3+IdMuEcWibJ72DDOsXLkSmEaSzwEUaYBT6DWgOfBiHGCux4q433X6+OEFWjlVqp7gL6g==}
-    dev: false
-
   /postcss-html@1.5.0:
     resolution: {integrity: sha512-kCMRWJRHKicpA166kc2lAVUGxDZL324bkj/pVOb6RhjB0Z5Krl7mN0AsVkBhVIRZZirY0lyQXG38HCVaoKVNoA==}
     engines: {node: ^12 || >=14}
@@ -2592,70 +2508,6 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
     dev: true
-
-  /prismjs@1.29.0:
-    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
-    engines: {node: '>=6'}
-    dev: false
-
-  /prosemirror-commands@1.5.2:
-    resolution: {integrity: sha512-hgLcPaakxH8tu6YvVAaILV2tXYsW3rAdDR8WNkeKGcgeMVQg3/TMhPdVoh7iAmfgVjZGtcOSjKiQaoeKjzd2mQ==}
-    dependencies:
-      prosemirror-model: 1.19.3
-      prosemirror-state: 1.4.3
-      prosemirror-transform: 1.7.5
-    dev: false
-
-  /prosemirror-history@1.3.2:
-    resolution: {integrity: sha512-/zm0XoU/N/+u7i5zepjmZAEnpvjDtzoPWW6VmKptcAnPadN/SStsBjMImdCEbb3seiNTpveziPTIrXQbHLtU1g==}
-    dependencies:
-      prosemirror-state: 1.4.3
-      prosemirror-transform: 1.7.5
-      prosemirror-view: 1.32.0
-      rope-sequence: 1.3.4
-    dev: false
-
-  /prosemirror-inputrules@1.2.1:
-    resolution: {integrity: sha512-3LrWJX1+ULRh5SZvbIQlwZafOXqp1XuV21MGBu/i5xsztd+9VD15x6OtN6mdqSFI7/8Y77gYUbQ6vwwJ4mr6QQ==}
-    dependencies:
-      prosemirror-state: 1.4.3
-      prosemirror-transform: 1.7.5
-    dev: false
-
-  /prosemirror-keymap@1.2.2:
-    resolution: {integrity: sha512-EAlXoksqC6Vbocqc0GtzCruZEzYgrn+iiGnNjsJsH4mrnIGex4qbLdWWNza3AW5W36ZRrlBID0eM6bdKH4OStQ==}
-    dependencies:
-      prosemirror-state: 1.4.3
-      w3c-keyname: 2.2.8
-    dev: false
-
-  /prosemirror-model@1.19.3:
-    resolution: {integrity: sha512-tgSnwN7BS7/UM0sSARcW+IQryx2vODKX4MI7xpqY2X+iaepJdKBPc7I4aACIsDV/LTaTjt12Z56MhDr9LsyuZQ==}
-    dependencies:
-      orderedmap: 2.1.1
-    dev: false
-
-  /prosemirror-state@1.4.3:
-    resolution: {integrity: sha512-goFKORVbvPuAQaXhpbemJFRKJ2aixr+AZMGiquiqKxaucC6hlpHNZHWgz5R7dS4roHiwq9vDctE//CZ++o0W1Q==}
-    dependencies:
-      prosemirror-model: 1.19.3
-      prosemirror-transform: 1.7.5
-      prosemirror-view: 1.32.0
-    dev: false
-
-  /prosemirror-transform@1.7.5:
-    resolution: {integrity: sha512-U/fWB6frEzY7dzwJUo+ir8dU1JEanaI/RwL12Imy9js/527N0v/IRUKewocP1kTq998JNT18IGtThaDLwLOBxQ==}
-    dependencies:
-      prosemirror-model: 1.19.3
-    dev: false
-
-  /prosemirror-view@1.32.0:
-    resolution: {integrity: sha512-HwW7IWgca6ehiW2PA48H/8yl0TakA0Ms5LgN5Krc97oar7GfjIKE/NocUsLe74Jq4mwyWKUNoBljE8WkXKZwng==}
-    dependencies:
-      prosemirror-model: 1.19.3
-      prosemirror-state: 1.4.3
-      prosemirror-transform: 1.7.5
-    dev: false
 
   /punycode@2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
@@ -2809,10 +2661,6 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
-
-  /rope-sequence@1.3.4:
-    resolution: {integrity: sha512-UT5EDe2cu2E/6O4igUr5PSFs23nvvukicWHx6GnOPlHAiiYbzNuCRQCuiUdHJQcqKalLKlrYJnjY0ySGsXNQXQ==}
-    dev: false
 
   /run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -3252,10 +3100,6 @@ packages:
       yn: 3.1.1
     dev: true
 
-  /tui-color-picker@2.2.8:
-    resolution: {integrity: sha512-q5sE9NQ5NR9lYpilYjcI7Sdv0KCogo+W8fZY+AYTj/HYg+9fscYy3UuJ6UQiV1bF+ARCLwFRWC8UcOt9kuUctQ==}
-    dev: false
-
   /type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -3441,10 +3285,6 @@ packages:
       '@vue/runtime-dom': 3.3.4
       '@vue/server-renderer': 3.3.4(vue@3.3.4)
       '@vue/shared': 3.3.4
-
-  /w3c-keyname@2.2.8:
-    resolution: {integrity: sha512-dpojBhNsCNN7T82Tm7k26A6G9ML3NkhDsnw9n/eoxSRlVBB4CEtIQ/KTCLI2Fwf3ataSXRhYFkQi3SlnFwPvPQ==}
-    dev: false
 
   /which@1.3.1:
     resolution: {integrity: sha512-HxJdYWq1MTIQbJ3nw0cqssHoTNU267KlrDuGZ1WYlxDStUtKUhOaJmh112/TZmHxxUfuJqPXSOm7tDyas0OSIQ==}
