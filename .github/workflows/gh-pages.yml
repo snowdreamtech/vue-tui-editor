@@ -50,7 +50,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --no-frozen-lockfile && cd example && pnpm install --no-frozen-lockfile 
 
       - name: ESLint
         run: pnpm lint:eslint
@@ -59,12 +59,12 @@ jobs:
         run: pnpm lint:stylelint
 
       - name: Build
-        run: pnpm build && touch dist/.nojekyll
+        run: pnpm build && cd example && pnpm build  && touch dist/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: dist
+          path: example/dist
 
   deploy:
     environment:
