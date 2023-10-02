@@ -4,9 +4,12 @@
 
 <script setup lang="ts">
 import Editor from '@toast-ui/editor';
+import '@toast-ui/editor/dist/toastui-editor.css'
 import { onMounted, onDeactivated, defineEmits, defineProps, ref } from 'vue'
 import { editorEvents, defaultValueMap } from './options'
 import { SAObject } from './interface'
+import { plugins } from './plugins'
+import { Prism } from './prismjs'
 
 
 // language
@@ -79,9 +82,16 @@ Object.keys(defaultValueMap).forEach((key) => {
 
 
 onMounted(() => {
-    const options = { ...computedOptions, viewer: true, el: toastuiViewer.value };
+    const options = {
+        ...computedOptions,
+        viewer: true,
+        plugins: plugins,
+        el: toastuiViewer.value
+    };
 
-    editorRef.value =  Editor.factory(options);
+    editorRef.value = Editor.factory(options);
+
+    Prism.highlightAll()
 })
 
 

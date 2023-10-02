@@ -5,9 +5,33 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@toast-ui/chart':
+    specifier: 4.6.1
+    version: 4.6.1
   '@toast-ui/editor':
     specifier: 3.2.2
     version: 3.2.2
+  '@toast-ui/editor-plugin-chart':
+    specifier: 3.0.1
+    version: 3.0.1
+  '@toast-ui/editor-plugin-code-syntax-highlight':
+    specifier: 3.1.0
+    version: 3.1.0
+  '@toast-ui/editor-plugin-color-syntax':
+    specifier: 3.1.0
+    version: 3.1.0
+  '@toast-ui/editor-plugin-table-merged-cell':
+    specifier: 3.1.0
+    version: 3.1.0
+  '@toast-ui/editor-plugin-uml':
+    specifier: 3.0.1
+    version: 3.0.1
+  prismjs:
+    specifier: 1.29.0
+    version: 1.29.0
+  tui-color-picker:
+    specifier: 2.2.8
+    version: 2.2.8
   vue:
     specifier: 3.3.4
     version: 3.3.4
@@ -25,6 +49,9 @@ devDependencies:
   '@types/node':
     specifier: 20.7.1
     version: 20.7.1
+  '@types/prismjs':
+    specifier: 1.26.1
+    version: 1.26.1
   '@vitejs/plugin-vue':
     specifier: 4.3.4
     version: 4.3.4(vite@4.4.9)(vue@3.3.4)
@@ -659,6 +686,38 @@ packages:
     resolution: {integrity: sha512-EF3948ckf3f5uPgYbQ6GhyA56Dmv8yg0+ir+BroRjwdxyZJsekhZzawOecC2rOTPCz173t7ZcR1HHZu0dZgOCw==}
     dev: true
 
+  /@toast-ui/chart@4.6.1:
+    resolution: {integrity: sha512-F35IkHS0U9zqN6xIV1Yj3/wh8KGlZyzT3bwVGBJh/82DMDMn8rD2Us8X7xBMBGcZ3E15qkfnKjrATxU5ZoGAnA==}
+    dev: false
+
+  /@toast-ui/editor-plugin-chart@3.0.1:
+    resolution: {integrity: sha512-mdqJerDo836kxKZEa3B6NZOJLrb+acRMkPIanYo//9GFPJcllG7KFdZU+K0bSMapEED7W7OJCsOzM0VNThndHg==}
+    dependencies:
+      '@toast-ui/chart': 4.6.1
+    dev: false
+
+  /@toast-ui/editor-plugin-code-syntax-highlight@3.1.0:
+    resolution: {integrity: sha512-OgX5pZiTnHREoTTXDAFu1k6RzEspGOxeJNRlt/Lnoi1GvLbIpUTTbBcls9becpXT/Qdls++8G3r5C60cVdellA==}
+    dependencies:
+      prismjs: 1.29.0
+    dev: false
+
+  /@toast-ui/editor-plugin-color-syntax@3.1.0:
+    resolution: {integrity: sha512-UVKfMBPV+3snSaJn9RUKGbxJbgi92D2t68ow8wAjGezvMp1ht4UVETrvomdTGr+RYhXSeH3JvSwN9nmQqw0qzA==}
+    dependencies:
+      tui-color-picker: 2.2.8
+    dev: false
+
+  /@toast-ui/editor-plugin-table-merged-cell@3.1.0:
+    resolution: {integrity: sha512-9ch9h1heTs0Kkmhwpb1ef9psQSM77wvUO3J75BsHv3RO5nAug42W3HC4Y+qbX5n1z1VhOGGjuOb4GPIr8s5dRA==}
+    dev: false
+
+  /@toast-ui/editor-plugin-uml@3.0.1:
+    resolution: {integrity: sha512-KKvTB++lJkogOSBgtgJqli5nW76/fgxh0CvsHqKh5WQu2r6O+BTGPBG6oRy9PBfJvwN1g8YZ4ZLQGXSXDrtm1w==}
+    dependencies:
+      plantuml-encoder: 1.4.0
+    dev: false
+
   /@toast-ui/editor@3.2.2:
     resolution: {integrity: sha512-ASX7LFjN2ZYQJrwmkUajPs7DRr9FsM1+RQ82CfTO0Y5ZXorBk1VZS4C2Dpxinx9kl55V4F8/A2h2QF4QMDtRbA==}
     dependencies:
@@ -717,6 +776,10 @@ packages:
 
   /@types/normalize-package-data@2.4.2:
     resolution: {integrity: sha512-lqa4UEhhv/2sjjIQgjX8B+RBjj47eo0mzGasklVJ78UKGQY1r0VpB9XHDaZZO9qzEFDdy4MrXLuEaSmPrPSe/A==}
+    dev: true
+
+  /@types/prismjs@1.26.1:
+    resolution: {integrity: sha512-Q7jDsRbzcNHIQje15CS/piKhu6lMLb9jwjxSfEIi4KcFKXW23GoJMkwQiJ8VObyfx+VmUaDcJxXaWN+cTCjVog==}
     dev: true
 
   /@types/semver@7.5.3:
@@ -2445,6 +2508,10 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
+  /plantuml-encoder@1.4.0:
+    resolution: {integrity: sha512-sxMwpDw/ySY1WB2CE3+IdMuEcWibJ72DDOsXLkSmEaSzwEUaYBT6DWgOfBiHGCux4q433X6+OEFWjlVqp7gL6g==}
+    dev: false
+
   /postcss-html@1.5.0:
     resolution: {integrity: sha512-kCMRWJRHKicpA166kc2lAVUGxDZL324bkj/pVOb6RhjB0Z5Krl7mN0AsVkBhVIRZZirY0lyQXG38HCVaoKVNoA==}
     engines: {node: ^12 || >=14}
@@ -2522,6 +2589,11 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
     dev: true
+
+  /prismjs@1.29.0:
+    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
+    engines: {node: '>=6'}
+    dev: false
 
   /prosemirror-commands@1.5.2:
     resolution: {integrity: sha512-hgLcPaakxH8tu6YvVAaILV2tXYsW3rAdDR8WNkeKGcgeMVQg3/TMhPdVoh7iAmfgVjZGtcOSjKiQaoeKjzd2mQ==}
@@ -3176,6 +3248,10 @@ packages:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     dev: true
+
+  /tui-color-picker@2.2.8:
+    resolution: {integrity: sha512-q5sE9NQ5NR9lYpilYjcI7Sdv0KCogo+W8fZY+AYTj/HYg+9fscYy3UuJ6UQiV1bF+ARCLwFRWC8UcOt9kuUctQ==}
+    dev: false
 
   /type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}

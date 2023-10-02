@@ -47,7 +47,15 @@
     "publish": "npm publish --access=public"
   },
   "dependencies": {
+    "@toast-ui/chart": "4.6.1",
     "@toast-ui/editor": "3.2.2",
+    "@toast-ui/editor-plugin-chart": "3.0.1",
+    "@toast-ui/editor-plugin-code-syntax-highlight": "3.1.0",
+    "@toast-ui/editor-plugin-color-syntax": "3.1.0",
+    "@toast-ui/editor-plugin-table-merged-cell": "3.1.0",
+    "@toast-ui/editor-plugin-uml": "3.0.1",
+    "tui-color-picker": "2.2.8",
+    "prismjs": "1.29.0",
     "vue": "3.3.4"
   },
   "devDependencies": {
@@ -55,6 +63,7 @@
     "@commitlint/config-conventional": "17.7.0",
     "@rushstack/eslint-patch": "1.5.0",
     "@types/node": "20.7.1",
+    "@types/prismjs": "1.26.1",
     "@vitejs/plugin-vue": "4.3.4",
     "@vue/eslint-config-typescript": "12.0.0",
     "eslint": "8.50.0",
