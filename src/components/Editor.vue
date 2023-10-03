@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import Editor from '@toast-ui/editor';
+import Editor, { EditorType } from '@toast-ui/editor';
 import '@toast-ui/editor/dist/toastui-editor.css'
 
 import { onMounted, onDeactivated, defineEmits, defineProps, watch, ref } from 'vue'
@@ -76,10 +76,10 @@ watch(
 )
 
 watch(
-  () => props.initialValue,
-  () => {
-    Prism.highlightAll()
-  }
+    () => props.initialValue,
+    () => {
+        Prism.highlightAll()
+    }
 )
 
 //mixin
@@ -90,7 +90,7 @@ editorEvents.forEach((event) => {
     eventOptions[event] = (...args: any) => {
         emit(event, ...args);
     };
-});
+})
 
 const computedOptions: SAObject = {
     ...props.options,
@@ -98,14 +98,57 @@ const computedOptions: SAObject = {
     initialValue: props.initialValue,
     height: props.height,
     previewStyle: props.previewStyle,
-    events: eventOptions,
-};
+    // events: eventOptions,
+    events: {
+        load: (param: Editor) => {
+            emit('load', param);
+
+            Prism.highlightAll()
+        },
+        change: (editorType: EditorType) => {
+            if(editorType === 'markdown'){
+                emit('change', editorType, editorRef.value.getMarkdown());
+            }else if(editorType === 'wysiwyg'){
+                emit('change', editorType, editorRef.value.getHTML());
+            }else{
+                emit('change', editorType, '');
+            }
+
+            Prism.highlightAll()
+        },
+        caretChange: (editorType: EditorType) => {
+            emit('caretChange', editorType);
+        },
+        focus: (editorType: EditorType) => {
+            emit('focus', editorType);
+        },
+        blur: (editorType: EditorType) => {
+            emit('blur', editorType);
+        },
+        keydown: (editorType: EditorType, ev: KeyboardEvent) => {
+            emit('keydown', editorType, ev);
+        },
+        keyup: (editorType: EditorType, ev: KeyboardEvent) => {
+            emit('keyup', editorType, ev);
+        },
+        beforePreviewRender: (html: string) => {
+            emit('beforePreviewRender', html);
+
+            return html
+        },
+        beforeConvertWysiwygToMarkdown: (markdownText: string) => {
+            emit('beforeConvertWysiwygToMarkdown', markdownText);
+
+            return markdownText
+        }
+    }
+}
 
 Object.keys(defaultValueMap).forEach((key) => {
     if (!computedOptions[key]) {
         computedOptions[key] = defaultValueMap[key];
     }
-});
+})
 
 onMounted(() => {
     const options = {
@@ -115,7 +158,7 @@ onMounted(() => {
     };
 
     editorRef.value = new Editor(options);
-
+    
     Prism.highlightAll()
 })
 
@@ -126,7 +169,6 @@ onDeactivated(() => {
     });
     editorRef.value.destroy();
 })
-
 
 const invoke = ((methodName: string | number, ...args: any) => {
     let result = null;
