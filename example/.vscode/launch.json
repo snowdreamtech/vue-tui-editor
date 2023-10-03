@@ -1,0 +1,53 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "client: msedge",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "client: firefox",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "client: chrome",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "server: vite",
+      "outputCapture": "std",
+      "program": "${workspaceFolder}/node_modules/vite/bin/vite.js",
+      "env": {
+        "MODE":"dev"
+      },
+      "args": ["dev"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "fullstack: vite msedge",
+      "configurations": ["server: vite", "client: msedge"]
+    },
+    {
+      "name": "fullstack: vite firefox",
+      "configurations": ["server: vite", "client: firefox"]
+    },
+    {
+      "name": "fullstack: vite chrome",
+      "configurations": ["server: vite", "client: chrome"]
+    }
+  ]
+}
