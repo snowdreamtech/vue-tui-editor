@@ -1,3 +1,9 @@
+## 0.1.4 (2023-10-04)
+
+### New feature:
+
+- tui with customHTMLRenderer([`e3b50a7`](https://github.com/snowdreamtech/vue-tui-editor/commit/e3b50a7d7dc9bbd9f5d769bde059cbb181e3092a)) (by sn0wdr1am)
+
 ## 0.1.3 (2023-10-03)
 
 ### Bugs fixed:
