@@ -92,7 +92,7 @@ import 'prismjs/plugins/show-language/prism-show-language.min.js'
 import 'prismjs/plugins/keep-markup/prism-keep-markup.min.js'
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js'
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js'
-import 'prismjs/plugins/file-highlight/prism-file-highlight.min.js'
+// import 'prismjs/plugins/file-highlight/prism-file-highlight.min.js'
 
 import 'prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js'
 import 'prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.css'

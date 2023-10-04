@@ -17,4 +17,6 @@ export const defaultValueMap: SAObject = {
     initialValue: '',
     height: '800px',
     previewStyle: 'vertical',
+    hideModeSwitch: 'false',
+    previewHighlight: true,
 };
