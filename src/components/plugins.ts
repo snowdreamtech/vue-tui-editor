@@ -1,14 +1,3 @@
-
-import { Prism } from './prismjs'
-// import 'prismjs/themes/prism.css'
-// import 'prismjs/themes/prism-dark.css'
-// import 'prismjs/themes/prism-okaidia.css'
-// import 'prismjs/themes/prism-tomorrow.css'
-// import 'prismjs/themes/prism-coy.css'
-// import 'prismjs/themes/prism-funky.css'
-// import 'prismjs/themes/prism-solarizedlight.css'
-// import 'prismjs/themes/prism-twilight.css'
-
 import '@toast-ui/chart/dist/toastui-chart.css'
 import chart from '@toast-ui/editor-plugin-chart'
 
@@ -21,17 +10,7 @@ import 'tui-color-picker/dist/tui-color-picker.css'
 import '@toast-ui/editor-plugin-color-syntax/dist/toastui-editor-plugin-color-syntax.css'
 import colorSyntax from '@toast-ui/editor-plugin-color-syntax'
 
-// import * as Prism from 'prismjs'
-// // import 'prismjs/themes/prism.css'
-// // import 'prismjs/themes/prism-dark.css'
-// // import 'prismjs/themes/prism-okaidia.css'
-// import 'prismjs/themes/prism-tomorrow.css'
-// // import 'prismjs/themes/prism-coy.css'
-// // import 'prismjs/themes/prism-funky.css'
-// // import 'prismjs/themes/prism-solarizedlight.css'
-// // import 'prismjs/themes/prism-twilight.css'
-
-
+import { Prism } from './prismjs'
 
 import '@toast-ui/editor-plugin-code-syntax-highlight/dist/toastui-editor-plugin-code-syntax-highlight.css'
 import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight';

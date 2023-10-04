@@ -75,12 +75,6 @@ watch(
     }
 )
 
-watch(
-    () => props.initialValue,
-    () => {
-        Prism.highlightAll()
-    }
-)
 
 //mixin
 const emit = defineEmits(editorEvents)
@@ -102,19 +96,15 @@ const computedOptions: SAObject = {
     events: {
         load: (param: Editor) => {
             emit('load', param);
-
-            Prism.highlightAll()
         },
         change: (editorType: EditorType) => {
-            if(editorType === 'markdown'){
+            if (editorType === 'markdown') {
                 emit('change', editorType, editorRef.value.getMarkdown());
-            }else if(editorType === 'wysiwyg'){
+            } else if (editorType === 'wysiwyg') {
                 emit('change', editorType, editorRef.value.getHTML());
-            }else{
+            } else {
                 emit('change', editorType, '');
             }
-
-            Prism.highlightAll()
         },
         caretChange: (editorType: EditorType) => {
             emit('caretChange', editorType);
@@ -133,14 +123,71 @@ const computedOptions: SAObject = {
         },
         beforePreviewRender: (html: string) => {
             emit('beforePreviewRender', html);
-
             return html
         },
         beforeConvertWysiwygToMarkdown: (markdownText: string) => {
             emit('beforeConvertWysiwygToMarkdown', markdownText);
-
             return markdownText
         }
+    },
+    customHTMLRenderer: {
+        codeBlock(node: any) {
+            const { fenceLength, info } = node as any;
+            const infoWords = info ? info.split(/\s+/) : [];
+            const preClasses = [];
+            const codeAttrs: any = {};
+
+            if (fenceLength > 3) {
+                codeAttrs['data-backticks'] = fenceLength;
+            }
+
+            let language = ''
+            if (infoWords.length > 0 && infoWords[0].length > 0) {
+                const [lang] = infoWords;
+
+                preClasses.push(`language-${lang}`);
+                preClasses.push('no-line-numbers');
+                codeAttrs['data-language'] = lang;
+
+                const registeredLang = Prism.languages[lang];
+
+                if (registeredLang) {
+                    language = lang
+
+                    node.literal! = Prism.highlight(node.literal!, registeredLang, lang);
+                }
+            }
+
+            return [
+                { type: 'openTag', tagName: 'div ', classNames: ['code-toolbar'] },
+                { type: 'openTag', tagName: 'pre', classNames: preClasses },
+                { type: 'openTag', tagName: 'code', classNames: preClasses, attributes: codeAttrs },
+                { type: 'html', content: node.literal! },
+                { type: 'closeTag', tagName: 'code' },
+                { type: 'closeTag', tagName: 'pre' },
+                { type: 'html', content: `<div class="toolbar">
+                    <div class="toolbar-item"><span>${language}</span></div>
+                </div>`
+                },
+                { type: 'closeTag', tagName: 'div ' },
+            ];
+        },
+        htmlBlock: {
+            iframe(node: any) {
+                return [
+                    { type: 'openTag', tagName: 'iframe', outerNewLine: true, attributes: node.attrs },
+                    { type: 'html', content: node.childrenHTML },
+                    { type: 'closeTag', tagName: 'iframe', outerNewLine: true },
+                ];
+            },
+            video(node: any) {
+                return [
+                    { type: 'openTag', tagName: 'video', outerNewLine: true, attributes: node.attrs },
+                    { type: 'html', content: node.childrenHTML },
+                    { type: 'closeTag', tagName: 'video', outerNewLine: true },
+                ];
+            }
+        },
     }
 }
 
@@ -158,7 +205,7 @@ onMounted(() => {
     };
 
     editorRef.value = new Editor(options);
-    
+
     Prism.highlightAll()
 })
 
